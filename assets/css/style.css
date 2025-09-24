@@ -52,7 +52,6 @@ body {
     line-height: 26px;
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
-    cursor: url("../img/theme-img/cursor.png"), auto
 }
 
 iframe {
@@ -121,7 +120,6 @@ a {
     outline: 0;
     -webkit-transition: all ease 0.4s;
     transition: all ease 0.4s;
-    cursor: url("../img/theme-img/pointer.png"), auto !important
 }
 
 a:hover {
@@ -139,7 +137,7 @@ a:visited {
 button {
     -webkit-transition: all ease 0.4s;
     transition: all ease 0.4s;
-    cursor: url("../img/theme-img/pointer.png"), auto !important
+    
 }
 
 img {
@@ -1026,11 +1024,7 @@ ul.wp-block-rss a {
     }
 }
 
-@media only screen and (min-width: 1300px) {
-    .th-container {
-        --main-container: 1720px
-    }
-}
+
 
 @media only screen and (max-width: 1600px) {
     .container-fluid.px-0 {
@@ -1229,7 +1223,6 @@ select {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    cursor: url("../img/theme-img/pointer.png"), auto
 }
 
 .form-select.style2,
@@ -1330,7 +1323,6 @@ input[type="checkbox"]:checked~label:before {
 input[type="checkbox"]~label {
     position: relative;
     padding-left: 30px;
-    cursor: url("../img/theme-img/pointer.png"), auto;
     display: block
 }
 
@@ -1383,7 +1375,6 @@ input[type="radio"] {
 input[type="radio"]~label {
     position: relative;
     padding-left: 30px;
-    cursor: url("../img/theme-img/pointer.png"), auto;
     line-height: 1;
     display: inline-block;
     font-weight: 600;
@@ -1560,7 +1551,6 @@ textarea.is-invalid {
     opacity: 1;
     background-color: var(--theme-color);
     position: relative;
-    cursor: url("../img/theme-img/pointer.png"), auto
 }
 
 .swiper-pagination-bullets .swiper-pagination-bullet:before {
@@ -2177,35 +2167,35 @@ textarea.is-invalid {
 
 .th-btn .top-line {
     height: 2px;
-    width: 1.8rem;
+    /* width: 1.8rem;
     top: 0;
     left: 1.4rem;
     position: absolute;
     background: var(--body-bg);
     -webkit-transition: width 0.5s ease-out, left 0.3s ease-out;
-    transition: width 0.5s ease-out, left 0.3s ease-out
+    transition: width 0.5s ease-out, left 0.3s ease-out */
 }
 
 .th-btn .bottom-line-1 {
     height: 2px;
-    width: 1.8rem;
+    /* width: 1.8rem;
     right: 4rem;
     bottom: 0;
     position: absolute;
     background: var(--body-bg);
     -webkit-transition: width 0.5s ease-out, right 0.3s ease-out;
-    transition: width 0.5s ease-out, right 0.3s ease-out
+    transition: width 0.5s ease-out, right 0.3s ease-out */
 }
 
 .th-btn .bottom-line-2 {
     height: 2px;
-    width: 1.2rem;
+    /* width: 1.2rem;
     right: 1rem;
     bottom: 0;
     position: absolute;
     background: var(--body-bg);
     -webkit-transition: width 0.5s ease-out, right 0.3s ease-out;
-    transition: width 0.5s ease-out, right 0.3s ease-out
+    transition: width 0.5s ease-out, right 0.3s ease-out */
 }
 
 .th-btn:hover,
@@ -2583,7 +2573,6 @@ textarea.is-invalid {
     bottom: 30px;
     height: 50px;
     width: 50px;
-    cursor: url("../img/theme-img/pointer.png"), auto;
     display: block;
     border-radius: 50px;
     z-index: 10000;
@@ -2608,7 +2597,6 @@ textarea.is-invalid {
     top: 0;
     height: 50px;
     width: 50px;
-    cursor: url("../img/theme-img/pointer.png"), auto;
     display: block;
     z-index: 1;
     border: 2px solid var(--theme-color);
@@ -2755,6 +2743,11 @@ textarea.is-invalid {
     text-align: inherit !important
 }
 
+
+a{
+    text-decoration: none !important;
+}
+
 .title-area:has(.sub-title3) {
     margin-top: -3px
 }
@@ -2770,7 +2763,8 @@ textarea.is-invalid {
 }
 
 .box-title a {
-    color: inherit
+    color: inherit;
+    text-decoration: none;
 }
 
 .box-title a:hover {
@@ -4926,13 +4920,11 @@ a.text-theme:hover,
     border: none;
     margin-top: 15px;
     margin-bottom: 25px;
-    cursor: url("../img/theme-img/pointer.png"), auto;
     border-radius: 0
 }
 
 .price_slider_wrapper .ui-slider-range {
     border: none;
-    cursor: url("../img/theme-img/pointer.png"), auto;
     position: absolute;
     top: 0;
     height: 100%;
@@ -4948,7 +4940,6 @@ a.text-theme:hover,
     border-radius: 50%;
     text-align: center;
     padding: 0;
-    cursor: url("../img/theme-img/pointer.png"), auto;
     position: absolute;
     margin-top: -5px;
     z-index: 2;
@@ -6525,11 +6516,12 @@ ol.wp-block-rss {
 }
 
 .header-layout3 .main-menu>ul>li>a {
-    color: var(--white-color)
+    color: var(--white-color);
+    text-decoration: none;
 }
 
 .header-layout3 .main-menu>ul>li>a:hover {
-    color: var(--theme-color)
+    color: var(--theme-color);
 }
 
 .header-layout3 .header-call {
@@ -8692,7 +8684,7 @@ ul.comment-list:has(>.th-comment-item ~ .th-comment-item):first-child>.th-post-c
 }
 
 .hero-3 {
-    background-color: #ffffff
+    background-color: #111111;
 }
 
 .hero-3 .banner-area {
@@ -8804,7 +8796,6 @@ ul.comment-list:has(>.th-comment-item ~ .th-comment-item):first-child>.th-post-c
 }
 
 .hero-3 .hero-thumb .tab-btn {
-    cursor: url("../img/theme-img/pointer.png"), auto;
     -webkit-transition: 0.4s ease-in-out;
     transition: 0.4s ease-in-out
 }
@@ -8960,6 +8951,7 @@ ul.comment-list:has(>.th-comment-item ~ .th-comment-item):first-child>.th-post-c
 
 .hero-style3 {
     padding: 245px 50px;
+    padding-left: 0px;
     text-align: center;
     display: inline-block;
     position: relative;
@@ -9204,7 +9196,6 @@ ul.comment-list:has(>.th-comment-item ~ .th-comment-item):first-child>.th-post-c
     font-size: 24px;
     right: 12px;
     color: var(--white-color);
-    cursor: url("../img/theme-img/pointer.png"), auto;
     width: 70px;
     height: 70px;
     -webkit-transition: all ease 0.4s;
@@ -10436,7 +10427,6 @@ table.woocommerce-product-attributes {
 
 .product-thumb-tab .tab-btn {
     background-color: var(--white-color);
-    cursor: url("../img/theme-img/pointer.png"), auto;
     height: var(--thumb);
     width: var(--thumb);
     padding: var(--gap)
@@ -13456,7 +13446,6 @@ span.select2-selection.select2-selection--single:focus {
     transform: scale(0.85);
     -webkit-transition: 0.4s ease-in-out;
     transition: 0.4s ease-in-out;
-    cursor: url("../img/theme-img/pointer.png"), auto
 }
 
 .testi-card-img .swiper-slide-active {
@@ -13697,9 +13686,7 @@ span.select2-selection.select2-selection--single:focus {
     clip-path: path("M5.28169 22.4421C6.94366 21.7403 8.39436 20.6737 9.6338 19.2421C10.8732 17.8105 11.6197 16.3509 11.8732 14.8632C12.0141 14.0772 12.0845 13.4035 12.0845 12.8421C12.0845 12.1965 12.0141 11.6632 11.8732 11.2421C10.5493 12.6175 8.87324 13.3053 6.84507 13.3053C4.8169 13.3053 3.16901 12.7158 1.90141 11.5368C0.633801 10.3579 -3.23375e-06 8.72982 -3.23311e-06 6.65263C-3.2325e-06 4.68772 0.676053 3.08772 2.02817 1.85263C3.35211 0.617546 5.04225 2.265e-06 7.09859 2.26437e-06C9.91549 2.26351e-06 11.9718 1.01053 13.2676 3.03158C13.8592 3.90176 14.3239 4.96842 14.662 6.23158C15 7.52281 15.169 8.84211 15.169 10.1895C15.169 13.1368 14.4084 15.8316 12.8873 18.2737C11.3662 20.7158 9.09859 22.6246 6.08451 24L5.28169 22.4421ZM23.1127 22.4421C24.7746 21.7403 26.2254 20.6737 27.4648 19.2421C28.7042 17.8105 29.4507 16.3509 29.7042 14.8632C29.8451 14.0772 29.9155 13.4035 29.9155 12.8421C29.9155 12.1965 29.8451 11.6632 29.7042 11.2421C28.3803 12.6175 26.7042 13.3053 24.6761 13.3053C22.6479 13.3053 21 12.7158 19.7324 11.5368C18.4648 10.3579 17.831 8.72982 17.831 6.65263C17.831 4.68772 18.507 3.08772 19.8592 1.85263C21.1831 0.617546 22.8732 2.25953e-06 24.9296 2.2589e-06C27.7465 2.25804e-06 29.8028 1.01053 31.0986 3.03158C31.6901 3.90176 32.1549 4.96842 32.493 6.23158C32.831 7.52281 33 8.84211 33 10.1895C33 13.1368 32.2394 15.8316 30.7183 18.2737C29.1972 20.7158 26.9296 22.6246 23.9155 24L23.1127 22.4421Z")
 }
 
-.thumb-slider2 .swiper-slide {
-    cursor: url("../img/theme-img/pointer.png"), auto
-}
+
 
 .thumb-slider2 .swiper-slide img {
     -webkit-transform: scale(0.9);
@@ -14549,7 +14536,7 @@ span.select2-selection.select2-selection--single:focus {
 }
 
 .feature-sec1 {
-    max-width: 1720px;
+    /* max-width: 1720px; */
     margin-left: auto;
     margin-right: auto;
     padding: 100px 0
@@ -14558,6 +14545,12 @@ span.select2-selection.select2-selection--single:focus {
 @media (max-width: 1199px) {
     .feature-sec1 {
         padding: 80px 0
+    }
+}
+
+@media only screen and (min-width: 1300px) {
+    .th-container {
+        --main-container: 1720px;
     }
 }
 
