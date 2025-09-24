@@ -26,9 +26,9 @@
     --success-color: #28a745;
     --error-color: #dc3545;
     --th-border-color: #D8DDE1;
-    --title-font: "ZCOOL XiaoWei", sans-serif;
-    --body-font: "Open Sans", sans-serif;
-    --style-font: "Great Vibes", cursive;
+    --title-font: "Rubik", sans-serif;
+    --body-font: "Poppins", sans-serif;
+    --style-font: "Poppins", sans-serif;
     --icon-font: "Font Awesome 6 Pro";
     --main-container: 1290px;
     --container-gutters: 30px;
@@ -40,7 +40,7 @@
 
 .theme-golden {
     --theme-color: #da3325;
-    --body-bg: #F4EFE3
+    --body-bg: #F4EFE3;
 }
 
 body {
@@ -137,7 +137,7 @@ a:visited {
 button {
     -webkit-transition: all ease 0.4s;
     transition: all ease 0.4s;
-    
+
 }
 
 img {
@@ -2744,7 +2744,7 @@ textarea.is-invalid {
 }
 
 
-a{
+a {
     text-decoration: none !important;
 }
 
@@ -6584,7 +6584,7 @@ ol.wp-block-rss {
 }
 
 @media (min-width: 991px) and (max-width: 2560px) {
-    .square-btn{
+    .square-btn {
         display: none;
     }
 }
@@ -8638,7 +8638,8 @@ ul.comment-list:has(>.th-comment-item ~ .th-comment-item):first-child>.th-post-c
     font-size: 164px;
     line-height: 1;
     margin-top: -0.21em;
-    margin-bottom: 35px
+    margin-bottom: 35px;
+    font-weight: 700;
 }
 
 @media (max-width: 1399px) {
