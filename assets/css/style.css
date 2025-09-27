@@ -12233,11 +12233,11 @@ span.select2-selection.select2-selection--single:focus {
 }
 
 .contact-feature:last-child .box-icon {
-    --theme-color: #DD5903
+    --theme-color: #da3325
 }
 
 .contact-feature:nth-child(2) .box-icon {
-    --theme-color: #C59D5F
+    --theme-color: #da3325
 }
 
 .contact-form {

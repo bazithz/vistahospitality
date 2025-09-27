@@ -564,3 +564,136 @@
   -o-transition: all 0.5s ease-out;
   transition: all 0.5s ease-out;
 }
+
+
+
+
+.contact-page-section {
+    text-align: center;
+    padding: 60px 20px 40px;
+  }
+
+  .contact-page-section h2 {
+    font-size: 2.2rem;
+    margin-bottom: 3    0px;
+    font-weight: bold;
+  }
+
+  .contact-page-section p {
+    color: #555;
+    margin-bottom: 40px;
+  }
+
+  /* Contact form */
+  .contact-page-form {
+    max-width: 700px;
+    margin: 0 auto 60px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  .contact-page-form input,
+  .contact-page-form textarea {
+    padding: 14px 18px;
+    border: none;
+    border-radius: 50px; /* pill shape */
+    font-size: 1rem;
+    width: 100%;
+    background: #fff;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+  }
+
+  .contact-page-form textarea {
+    grid-column: span 2;
+    border-radius: 25px;
+    resize: none;
+  }
+
+  .contact-page-form button {
+    grid-column: span 2;
+    padding: 14px;
+    border: none;
+    border-radius: 50px;
+    background: #da3325 ;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+
+  .contact-page-form button:hover {
+    background: #bd1000;
+  }
+
+  /* Contact info section */
+  .contact-page-info-bg {
+    background: #da3325;
+    padding: 50px 20px;
+  }
+
+  .contact-page-info-wrap {
+    background: #f2f2f2;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 40px 20px;
+    max-width: 1100px;
+    margin: auto;
+    margin-top: -110px;
+  }
+
+  .contact-page-info-box {
+    flex: 1 1 280px;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .contact-page-info-box .contact-page-icon {
+    background: #da3325 ;
+    color: #fff;
+    font-size: 1.5rem;
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+    border-radius: 50%;
+    margin: 0 auto 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .contact-page-info-box h3 {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+  }
+
+  .contact-page-info-box p {
+    color: #333;
+    font-size: 0.95rem;
+  }
+
+  .contact-page-info-box a {
+    color: #da3325;
+    text-decoration: none;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .contact-page-form {
+      grid-template-columns: 1fr;
+    }
+
+    .contact-page-form textarea,
+    .contact-page-form button {
+      grid-column: span 1;
+    }
+
+    .contact-page-info-wrap {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
