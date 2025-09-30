@@ -195,11 +195,11 @@
     transition: all 0.3s ease;
 }
 
-.carousel-control-prev:hover,
+/* .carousel-control-prev:hover,
 .carousel-control-next:hover {
     background: rgba(218, 51, 37, 0.2);
     border-color: #da3325;
-}
+} */
 
 .carousel-control-prev {
     left: -60px;
@@ -697,3 +697,180 @@
       text-align: center;
     }
   }
+
+
+
+
+
+  .services-section {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-title {
+    text-align: center;
+    font-size: clamp(32px, 5vw, 48px);
+    color: #1a1a1a;
+    font-weight: 700;
+    margin-bottom: 60px;
+}
+
+.services-wrapper {
+    position: relative;
+    background: url('../img/vista/DSC_6437.jpg') center/cover no-repeat;
+    border-radius: 20px;
+    padding: 80px 40px 60px;
+    min-height: 450px;
+    display: flex;
+    align-items: flex-end;
+}
+
+.services-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(255,255,255,0.3), rgba(255,255,255,0.7));
+    border-radius: 20px;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+.service-card {
+    background: white;
+    border-radius: 15px;
+    padding: 0 0 30px 0;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    text-align: center;
+    position: relative;
+    overflow: visible;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.icon-wrapper {
+    width: 80px;
+    height: 80px;
+    background: #000000;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: -40px auto 25px;
+    position: relative;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.service-title {
+    font-size: 20px;
+    color: #1a1a1a;
+    font-weight: 700;
+    margin-bottom: 15px;
+    padding: 0 20px;
+}
+
+.service-description {
+    color: #999;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    padding: 0 25px;
+}
+
+.more-button {
+    background: transparent;
+    border: none;
+    color: #000;
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s;
+    padding: 10px 20px;
+}
+
+.more-button:hover {
+    color: #0066ff;
+}
+
+.icon-wrapper i {
+    font-size: 40px;
+    color: #ffffff;
+}
+
+@media (max-width: 1024px) {
+    .services-wrapper {
+        padding: 80px 30px 60px;
+    }
+    
+    .services-grid {
+        gap: 25px;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 40px 15px;
+    }
+    
+    .section-title {
+        margin-bottom: 40px;
+    }
+    
+    .services-wrapper {
+        padding: 70px 20px 50px;
+        min-height: auto;
+    }
+    
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 60px;
+    }
+    
+    .service-card {
+        max-width: 400px;
+        margin: 0 auto;
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .services-wrapper {
+        padding: 60px 15px 40px;
+        border-radius: 15px;
+    }
+    
+    .icon-wrapper {
+        width: 70px;
+        height: 70px;
+        margin: -35px auto 20px;
+    }
+    
+    .service-title {
+        font-size: 18px;
+    }
+    
+    .service-description {
+        font-size: 13px;
+        padding: 0 20px;
+    }
+}
+
+#services {
+  scroll-behavior: smooth;
+}
+
+

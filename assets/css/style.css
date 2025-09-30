@@ -2232,11 +2232,14 @@ textarea.is-invalid {
     color: var(--title-color)
 }
 
+
 .th-btn.style-border:before,
 .th-btn.style-border:after {
     background-color: transparent;
     border: 2px solid var(--title-color);
-    width: 100%
+    width: 100%;
+    
+    
 }
 
 .th-btn.style-border.smoke-bg {
@@ -2279,6 +2282,17 @@ textarea.is-invalid {
     --body-bg: #0D060E;
     color: var(--white-color)
 }
+
+.th-btn.style-border:hover {
+    color: #da3325;
+}
+
+
+.th-btn.style-border:hover:before,
+.th-btn.style-border:hover:after {
+    border-color: #da3325;
+}
+
 
 .th-btn.style-border.border-four:before {
     border-color: var(--white-color)
@@ -14016,8 +14030,7 @@ span.select2-selection.select2-selection--single:focus {
 }
 
 .blog-box .box-title a {
-    background-image: -webkit-linear-gradient(right, var(--theme-color), var(--theme-color));
-    background-image: linear-gradient(to left, var(--theme-color), var(--theme-color));
+  
     background-repeat: no-repeat;
     background-position: bottom left;
     background-size: 0 2px;
@@ -14026,7 +14039,7 @@ span.select2-selection.select2-selection--single:focus {
 }
 
 .blog-box .box-title a:hover {
-    background-size: 100% 2px
+    background-size: 100% 2px;
 }
 
 .blog-box .blog-meta {
