@@ -820,67 +820,176 @@
 
 // testi
 
+   const testimonials = [
+            {
+                text: "The meals are fresh, tasty, and hygienic every single day. I truly appreciate the consistency and care taken to provide such a homely dining experience.",
+                author: "Sam",
+                stars: 5
+            },
+            {
+                text: "“Balanced menus with tasty options keep the kids happy and energized. As a parent, I appreciate the effort taken to ensure nutrition without sacrificing flavor.”",
+                author: "Priya",
+                stars: 5
+            },
+            {
+                text: "“I enjoy the variety and reliability. Every meal feels homemade, comforting, and energizing, which helps me focus better on studies and extracurricular activities throughout the day.”",
+                author: "Amal",
+                stars: 5
+            },
+            {
+                text: "“Consistency, flavor, and hygiene stand out the most. The meals keep the team motivated and create a positive atmosphere, making daily work routines much more enjoyable.”",
+                author: "Anjali",
+                stars: 5
+            },
+            {
+                text: "“The food is wholesome, tasty, and beautifully presented. It feels like every dish is prepared with care, ensuring both freshness and satisfaction every single day.”",
+                author: "Arjun",
+                stars: 4
+            },
+            {
+                text: "“From variety to quality, everything is impressive. Each meal feels thoughtfully prepared, with the perfect balance of flavor and nutrition, leaving everyone happy and content.”",
+                author: "Sneha",
+                stars: 5
+            }
+        ];
 
+        let currentIndex = 0;
 
-const observerOptions = {
-  threshold: 0.1,
-  rootMargin: '0px 0px -50px 0px'
-};
+        function createDots() {
+            const dotsContainer = document.getElementById('navDots');
+            dotsContainer.innerHTML = '';
+            
+            testimonials.forEach((_, index) => {
+                const dot = document.createElement('div');
+                dot.classList.add('dot');
+                if (index === 0) dot.classList.add('active');
+                dot.addEventListener('click', () => goToTestimonial(index));
+                dotsContainer.appendChild(dot);
+            });
+        }
 
-const observer = new IntersectionObserver(function(entries) {
-  entries.forEach(entry => {
-      if (entry.isIntersecting) {
-          entry.target.classList.add('animate');
+        function updateDots() {
+            const dots = document.querySelectorAll('.dot');
+            dots.forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentIndex);
+            });
+        }
+
+        function displayTestimonial() {
+            const testimonial = testimonials[currentIndex];
+            const card = document.getElementById('testimonialCard');
+            
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            
+            setTimeout(() => {
+                document.getElementById('testimonialText').textContent = testimonial.text;
+                document.getElementById('authorName').textContent = `— ${testimonial.author}`;
+                
+                const starsElement = document.querySelector('.stars');
+                starsElement.textContent = '★'.repeat(testimonial.stars);
+                
+                card.style.opacity = '1';
+                card.style.transform = 'translateY(0)';
+            }, 300);
+            
+            updateDots();
+        }
+
+        function changeTestimonial(direction) {
+            currentIndex += direction;
+            
+            if (currentIndex < 0) {
+                currentIndex = testimonials.length - 1;
+            } else if (currentIndex >= testimonials.length) {
+                currentIndex = 0;
+            }
+            
+            displayTestimonial();
+        }
+
+        function goToTestimonial(index) {
+            currentIndex = index;
+            displayTestimonial();
+        }
+
+        // Initialize
+        createDots();
+
+        // Smooth transition
+        document.getElementById('testimonialCard').style.transition = 'all 0.3s ease';
+
+        // Auto-play
+        let autoplayInterval = setInterval(() => {
+            changeTestimonial(1);
+        }, 6000);
+
+        // Pause on hover
+        const card = document.getElementById('testimonialCard');
+        card.addEventListener('mouseenter', () => {
+            clearInterval(autoplayInterval);
+        });
+
+        card.addEventListener('mouseleave', () => {
+            autoplayInterval = setInterval(() => {
+                changeTestimonial(1);
+            }, 6000);
+        });
+
+// const observerOptions = {
+//   threshold: 0.1,
+//   rootMargin: '0px 0px -50px 0px'
+// };
+
+// const observer = new IntersectionObserver(function(entries) {
+//   entries.forEach(entry => {
+//       if (entry.isIntersecting) {
+//           entry.target.classList.add('animate');
           
-          // Animate counters
-          if (entry.target.classList.contains('stats-row')) {
-              animateCounters();
-          }
-      }
-  });
-}, observerOptions);
+//           if (entry.target.classList.contains('stats-row')) {
+//               animateCounters();
+//           }
+//       }
+//   });
+// }, observerOptions);
 
-// Observe all animation elements
-document.querySelectorAll('.fade-in-up, .fade-in-left, .fade-in-right').forEach(el => {
-  observer.observe(el);
-});
+// document.querySelectorAll('.fade-in-up, .fade-in-left, .fade-in-right').forEach(el => {
+//   observer.observe(el);
+// });
 
-// Counter animation
-function animateCounters() {
-  const counters = document.querySelectorAll('.stat-number');
-  counters.forEach(counter => {
-      const target = parseInt(counter.getAttribute('data-count'));
-      const duration = 2000;
-      const start = performance.now();
+// function animateCounters() {
+//   const counters = document.querySelectorAll('.stat-number');
+//   counters.forEach(counter => {
+//       const target = parseInt(counter.getAttribute('data-count'));
+//       const duration = 2000;
+//       const start = performance.now();
       
-      const updateCounter = (currentTime) => {
-          const elapsed = currentTime - start;
-          const progress = Math.min(elapsed / duration, 1);
+//       const updateCounter = (currentTime) => {
+//           const elapsed = currentTime - start;
+//           const progress = Math.min(elapsed / duration, 1);
           
-          // Easing function
-          const easeOut = 1 - Math.pow(1 - progress, 3);
-          const current = Math.floor(easeOut * target);
+//           const easeOut = 1 - Math.pow(1 - progress, 3);
+//           const current = Math.floor(easeOut * target);
           
-          counter.textContent = current.toLocaleString();
+//           counter.textContent = current.toLocaleString();
           
-          if (progress < 1) {
-              requestAnimationFrame(updateCounter);
-          } else {
-              counter.textContent = target.toLocaleString();
-          }
-      };
+//           if (progress < 1) {
+//               requestAnimationFrame(updateCounter);
+//           } else {
+//               counter.textContent = target.toLocaleString();
+//           }
+//       };
       
-      requestAnimationFrame(updateCounter);
-  });
-}
+//       requestAnimationFrame(updateCounter);
+//   });
+// }
 
-// Add stagger effect to testimonial cards
-document.addEventListener('DOMContentLoaded', function() {
-  const cards = document.querySelectorAll('.testimonial-card');
-  cards.forEach((card, index) => {
-      card.style.animationDelay = `${index * 0.2}s`;
-  });
-});
+// document.addEventListener('DOMContentLoaded', function() {
+//   const cards = document.querySelectorAll('.testimonial-card');
+//   cards.forEach((card, index) => {
+//       card.style.animationDelay = `${index * 0.2}s`;
+//   });
+// });
 
 
 

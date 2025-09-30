@@ -292,7 +292,7 @@
             <section class="space-bottom mt-5" id="blog-sec">
                 <div class="container">
                     <div class="title-area text-center"><span class="sub-title3"><img
-                                src="assets/img/theme-img/title_icon.svg" alt="Icon">Our Services</span>    
+                                src="assets/img/theme-img/title_icon.svg" alt="Icon">Our Services</span>
                         <h2 class="sec-title">Our Delicious Services</h2>
                     </div>
                     <div class="row gy-40">
@@ -345,7 +345,7 @@
                         <div class="col-lg-6 pt-40 pb-40">
                             <div class="text-center text-lg-start">
                                 <h1 class="text-theme h1 title-ani2 mb-20">Unforgettable Culinary Experiences</h1>
-                                <p class="vip   title-ani2  text-white mb-30">Vista Hospitality Management, founded in
+                                <p class="title-ani2  text-white mb-30">Vista Hospitality Management, founded in
                                     2017 in Bengaluru, is dedicated to creating memorable dining experiences. Our
                                     passionate team combines attention to detail, seamless coordination, and a cheerful
                                     attitude to serve the most delicious meals.
@@ -488,24 +488,20 @@
             <!-- new testimonial -->
 
 
-            <section class="testimonials-section">
-                <!-- Floating shapes -->
+            <!-- <section class="testimonials-section">
                 <div class="floating-shape shape-1"></div>
                 <div class="floating-shape shape-2"></div>
                 <div class="floating-shape shape-3"></div>
 
                 <div class="container">
-                    <!-- Section Title -->
                     <div class="section-title fade-in-up">
                         <h2>What Our Clients Say</h2>
                         <p>Discover why thousands of clients trust Vista Catering for their most important events</p>
                     </div>
 
-                    <!-- Testimonials Carousel -->
                     <div id="testimonialCarousel" class="carousel slide testimonial-carousel" data-bs-ride="carousel"
                         data-bs-interval="5000">
                         <div class="carousel-inner">
-                            <!-- Slide 1 -->
                             <div class="carousel-item active">
                                 <div class="row">
                                     <div class="col-lg-4 col-md-6">
@@ -590,7 +586,6 @@
                                 </div>
                             </div>
 
-                            <!-- Slide 2 -->
                             <div class="carousel-item">
                                 <div class="row">
                                     <div class="col-lg-4 col-md-6">
@@ -674,7 +669,6 @@
                             </div>
                         </div>
 
-                        <!-- Carousel controls -->
                         <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel"
                             data-bs-slide="prev">
                             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -689,7 +683,6 @@
 
                     </div>
 
-                    <!-- Stats Section -->
                     <div class="row stats-row fade-in-up">
                         <div class="col-lg-3 col-md-6">
                             <div class="stat-item">
@@ -716,6 +709,31 @@
                             </div>
                         </div>
                     </div>
+                </div>
+            </section> -->
+
+
+            <section class="testimonials">
+                <div class="testimonials-section">
+                    <button class="nav-arrow prev" onclick="changeTestimonial(-1)">‹</button>
+                    <button class="nav-arrow next" onclick="changeTestimonial(1)">›</button>
+
+                    <div class="testimonial-wrapper">
+                        <div class="testimonial-card" id="testimonialCard">
+                            <div class="card-header">
+                                <div class="card-title">TESTIMONIAL</div>
+                                <div class="stars">★★★★★</div>
+                            </div>
+                            <p class="testimonial-text" id="testimonialText">
+                                “The college mess service has completely transformed our campus dining experience. Fresh,
+                                hygienic, and delicious meals every single day. Our students are happier and healthier
+                                than ever before.”
+                            </p>
+                            <p class="author-name" id="authorName">— Kumar</p>
+                        </div>
+                    </div>
+
+                    <div class="nav-dots" id="navDots"></div>
                 </div>
             </section>
 
@@ -796,7 +814,8 @@
                                             <h4 class="box-title">Address Location</h4>
                                             <div class="box-content">
                                                 <div class="box-icon"><i class="fas fa-location-dot"></i></div>
-                                                <p class="box-text">Bengaluru83, Karnataka</p>
+                                                <p class="box-text">354/355, S02 RJ Tower, Pavamanagara, Gottigere,
+                                                    Bengaluru-83, Karnataka</p>
                                             </div>
                                         </div>
 
