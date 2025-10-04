@@ -822,7 +822,7 @@
 
    const testimonials = [
             {
-                text: "The meals are fresh, tasty, and hygienic every single day. I truly appreciate the consistency and care taken to provide such a homely dining experience.",
+                text: "“The meals are fresh, tasty, and hygienic every single day. I truly appreciate the consistency and care taken to provide such a homely dining experience.”",
                 author: "Sam",
                 stars: 5
             },
